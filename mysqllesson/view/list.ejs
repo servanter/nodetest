@@ -1,0 +1,24 @@
+<html>
+<body>
+<table border="2">
+	<tr>
+		<th>姓名</th>
+		<th>密码</th>
+		<th>昵称</th>
+	<tr>
+	<%
+		if(data.length > 0 ) {
+			for(var i = 0 ; i < data.length; i++) {
+	%>
+				<tr>
+					<td><%=data[i].user_name%></td>
+					<td><%=data[i].pass_word%></td>
+					<td><%=data[i].user_nick%></td>
+				</tr>
+	<%
+			}
+		}
+	%>
+</table>
+</body>
+</html>

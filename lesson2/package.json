@@ -1,0 +1,22 @@
+{
+  "name": "lesson2",
+  "version": "1.0.0",
+  "description": "This is lesson 2.",
+  "main": "index.js",
+  "scripts": {
+    "test": "asd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://asdasd.github.com/adqwe"
+  },
+  "keywords": [
+    "lesson2"
+  ],
+  "author": "servanter",
+  "license": "adasd",
+  "dependencies": {
+    "express": "^4.9.8",
+    "utility": "^1.2.0"
+  }
+}
