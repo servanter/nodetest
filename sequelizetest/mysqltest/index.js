@@ -23,6 +23,7 @@ var user = User.build({
     pass_word:'12345'
 });
 
+
 user.save().complete(function(err){
     if(err) {
         throw err;
