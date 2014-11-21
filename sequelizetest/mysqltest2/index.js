@@ -1,32 +1,20 @@
 var Sequelize = require('sequelize');
-var sequelize = new Sequelize('listen', 'root', '123456', {
+var sequelize = new Sequelize('wechat_shop', 'root', '123456', {
 	dialect:'mysql',
 	port:3306
 });
 
-var User = sequelize.define('User', {
-	user_name:Sequelize.STRING,
-	pass_word:Sequelize.STRING
+var Area = sequelize.define('Area', {
+    id:Sequelize.BIGINT,
+    parent_id:Sequelize.BIGINT,
+    area_name:Sequelize.STRING,
+    area_ename:Sequelize.STRING,
 }, {
-	tableName:'user',
-	timestamps:false
+    tableName:'weshop_area',
+    timestamps:false
 });
 
 
-var u = User.build({
-	user_name:'woshiyige haoren',
-	pass_word:'nine'
-});
-
-User.create({
-	user_name:'wasdasdasdn',
-	pass_word:'nine'
-}).complete(function(err, result) {
+Area.findAll({where:{parent_id:0}, offset:2, limit:2}).success(function(result) {
 	console.log(result);
 })
-
-u.save().complete(function(err, result) {
-	console.log(result);
-
-})
-
